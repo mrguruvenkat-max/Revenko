@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVENKO</title>
+    <meta name="description"
+        content="Old memories, new owners — discover pre-loved products that still have stories left to tell.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.jpg">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header id="main-header">
+            <div class="nav-container">
+                <a href="#" class="logo" id="logo">
+                    RE<span>VENKO</span>
+                </a>
+                <nav id="nav-menu">
+                    <ul>
+                        <li><a href="#hero" class="active">Home</a></li>
+                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                        <li><a href="#shop">Explore Items</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <!-- Mobile Menu Hamburger Button -->
+                    <button class="icon-btn mobile-menu-toggle" id="mobile-menu-toggle" title="Toggle Navigation"
+                        aria-label="Toggle Navigation">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+                        <!-- Moon icon (Default dark mode) -->
+                        <svg id="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <!-- Sun icon (will show when light-theme is active) -->
+                        <svg id="theme-icon-sun" style="display: none;" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+
+                    <button class="icon-btn" id="cart-toggle" title="Shopping Cart" aria-label="Open Shopping Cart">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cart-badge">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <span class="anime-sparkle sparkle-1">✦</span>
+            <span class="anime-sparkle sparkle-2">✦</span>
+            <span class="anime-sparkle sparkle-3">✧</span>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-tag">Reuse • Restyle • ReVenko</span>
+                    <h1 class="hero-title">Better Products. Better Prices. <span>Better Choices.</span></h1>
+                    <p class="hero-desc">
+                        Every product at REVENKO has its own story — carefully used, well maintained,
+                        and ready to find a new owner who’ll value it again.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#shop" class="btn btn-primary">
+                            Explore
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#new-arrivals" class="btn btn-secondary">New Arrivals</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-vertical-marquee-container">
+                        <!-- Column 1: Upwards Scrolling -->
+                        <div class="marquee-col col-up">
+                            <div class="marquee-track-vertical">
+                                <div class="marquee-group-vertical">
+                                    <img class="marquee-img" src="assets/Backpack.avif" alt="Adventure-Ready Backpack"
+                                        onclick="openQuickView('travel-backpack')">
+                                    <img class="marquee-img" src="assets/Bluetooth Speaker.avif"
+                                        alt="BassBoost Portable Bluetooth Speaker"
+                                        onclick="openQuickView('bluetooth-speaker')">
+                                    <img class="marquee-img" src="assets/Coffee Mug.avif"
+                                        alt="Cozy Glazed Ceramic Coffee Mug"
+                                        onclick="openQuickView('ceramic-coffee-mug')">
+                                    <img class="marquee-img" src="assets/LED Bulb.avif"
+                                        alt="Energy-Saving Smart LED Bulb" onclick="openQuickView('smart-led-bulb')">
+                                    <img class="marquee-img" src="assets/Lunch Box.avif"
+                                        alt="Insulated Leakproof Lunch Box"
+                                        onclick="openQuickView('insulated-lunchbox')">
+                                    <img class="marquee-img" src="assets/Mobile Stand.avif"
+                                        alt="Adjustable Aluminum Mobile Stand"
+                                        onclick="openQuickView('aluminum-mobile-stand')">
+                                </div>
+                                <div class="marquee-group-vertical" aria-hidden="true">
+                                    <img class="marquee-img" src="assets/Backpack.avif" alt="Adventure-Ready Backpack"
+                                        onclick="openQuickView('travel-backpack')">
+                                    <img class="marquee-img" src="assets/Bluetooth Speaker.avif"
+                                        alt="BassBoost Portable Bluetooth Speaker"
+                                        onclick="openQuickView('bluetooth-speaker')">
+                                    <img class="marquee-img" src="assets/Coffee Mug.avif"
+                                        alt="Cozy Glazed Ceramic Coffee Mug"
+                                        onclick="openQuickView('ceramic-coffee-mug')">
+                                    <img class="marquee-img" src="assets/LED Bulb.avif"
+                                        alt="Energy-Saving Smart LED Bulb" onclick="openQuickView('smart-led-bulb')">
+                                    <img class="marquee-img" src="assets/Lunch Box.avif"
+                                        alt="Insulated Leakproof Lunch Box"
+                                        onclick="openQuickView('insulated-lunchbox')">
+                                    <img class="marquee-img" src="assets/Mobile Stand.avif"
+                                        alt="Adjustable Aluminum Mobile Stand"
+                                        onclick="openQuickView('aluminum-mobile-stand')">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 2: Downwards Scrolling -->
+                        <div class="marquee-col col-down">
+                            <div class="marquee-track-vertical">
+                                <div class="marquee-group-vertical">
+                                    <img class="marquee-img" src="assets/Notebook.avif"
+                                        alt="Classic Kraft Cover Notebook" onclick="openQuickView('classic-notebook')">
+                                    <img class="marquee-img" src="assets/Plastic Storage Box.avif"
+                                        alt="Sturdy Plastic Storage Organizer"
+                                        onclick="openQuickView('plastic-storage-box')">
+                                    <img class="marquee-img" src="assets/Umbrella.avif"
+                                        alt="Windproof Compact Travel Umbrella"
+                                        onclick="openQuickView('windproof-umbrella')">
+                                    <img class="marquee-img" src="assets/Water Bottle.avif"
+                                        alt="Vacuum Insulated Steel Water Bottle"
+                                        onclick="openQuickView('steel-water-bottle')">
+                                    <img class="marquee-img" src="assets/watch.avif"
+                                        alt="Minimalist Classic Analog Watch"
+                                        onclick="openQuickView('classic-analog-watch')">
+                                    <img class="marquee-img" src="assets/Backpack.avif" alt="Adventure-Ready Backpack"
+                                        onclick="openQuickView('travel-backpack')">
+                                </div>
+                                <div class="marquee-group-vertical" aria-hidden="true">
+                                    <img class="marquee-img" src="assets/Notebook.avif"
+                                        alt="Classic Kraft Cover Notebook" onclick="openQuickView('classic-notebook')">
+                                    <img class="marquee-img" src="assets/Plastic Storage Box.avif"
+                                        alt="Sturdy Plastic Storage Organizer"
+                                        onclick="openQuickView('plastic-storage-box')">
+                                    <img class="marquee-img" src="assets/Umbrella.avif"
+                                        alt="Windproof Compact Travel Umbrella"
+                                        onclick="openQuickView('windproof-umbrella')">
+                                    <img class="marquee-img" src="assets/Water Bottle.avif"
+                                        alt="Vacuum Insulated Steel Water Bottle"
+                                        onclick="openQuickView('steel-water-bottle')">
+                                    <img class="marquee-img" src="assets/watch.avif"
+                                        alt="Minimalist Classic Analog Watch"
+                                        onclick="openQuickView('classic-analog-watch')">
+                                    <img class="marquee-img" src="assets/Backpack.avif" alt="Adventure-Ready Backpack"
+                                        onclick="openQuickView('travel-backpack')">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Showcase Section -->
+        <section class="new-arrivals-section" id="new-arrivals">
+            <div class="new-arrivals-container">
+                <div class="section-header-centered">
+                    <span class="section-tag">Special Picks</span>
+                    <h2 class="section-title">Newly Arrived Pre-Loved Gear</h2>
+                    <p class="section-subtitle">The absolute latest additions from my room declutter list. Get them
+                        before they're gone!</p>
+                </div>
+                <div class="carousel-outer-wrapper">
+                    <button class="carousel-control-btn prev" id="new-arr-prev" aria-label="Previous Products">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="new-arrivals-grid" id="new-arrivals-container">
+                        <!-- Dynamically populated from app.js -->
+                    </div>
+                    <button class="carousel-control-btn next" id="new-arr-next" aria-label="Next Products">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop / Product Section -->
+        <section class="shop-section" id="shop">
+            <div class="section-header">
+                <div class="section-info">
+                    <span class="section-tag">More Than Just Used Products</span>
+                    <h2 class="section-title">Everyday Things, Meaningful Stories</h2>
+                </div>
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All Items</button>
+                    <button class="category-tab" data-category="used-clothes">Clothing</button>
+                    <button class="category-tab" data-category="delivery-boxes">Boxes</button>
+                    <button class="category-tab" data-category="home-used">Home Gear</button>
+                    <button class="category-tab" data-category="crazy-things">Toys & Curios</button>
+                </div>
+            </div>
+
+            <!-- Shop Notice Banner -->
+            <div class="shop-notice-banner">
+                <div class="notice-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" width="20" height="20">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                </div>
+                <p class="notice-text">
+                    <strong>Thoughtfully Shared:</strong> This is not a marketplace for random sellers — each product
+                    here has been personally owned and carefully preserved before being listed.
+                </p>
+            </div>
+
+            <div class="product-grid" id="product-grid-container">
+                <!-- Products will be dynamically generated by JS -->
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section class="benefits-section" id="why-choose">
+            <div class="benefits-container">
+                <div class="section-header-centered">
+                    <span class="section-tag">Old Memories • New Owners</span>
+                    <h2 class="section-title">Giving Good Things Another Life</h2>
+                    <p class="section-subtitle">
+                        Every item here was once part of a personal journey and is now
+                        waiting to continue that journey with someone else.
+                    </p>
+                </div>
+            </div>
+            <div class="benefits-text-marquee">
+                <div class="benefits-text-track">
+                    <div class="benefits-text-group">
+                        <span class="benefit-text-item">✦ <strong>Circular & Sustainable:</strong> Giving pre-loved gear
+                            a second lifecycle. Less waste, carbon-neutral local reuse.</span>
+                        <span class="benefit-text-item">✦ <strong>Thoroughly Tested:</strong> Cleaned, tested, and fully
+                            described so there are no surprises.</span>
+                        <span class="benefit-text-item">✦ <strong>Student & Budget Friendly:</strong> Direct secondhand
+                            prices in Rupees with free shipping over ₹1,500.</span>
+                    </div>
+                    <div class="benefits-text-group" aria-hidden="true">
+                        <span class="benefit-text-item">✦ <strong>Circular & Sustainable:</strong> Giving pre-loved gear
+                            a second lifecycle. Less waste, carbon-neutral local reuse.</span>
+                        <span class="benefit-text-item">✦ <strong>Thoroughly Tested:</strong> Cleaned, tested, and fully
+                            described so there are no surprises.</span>
+                        <span class="benefit-text-item">✦ <strong>Student & Budget Friendly:</strong> Direct secondhand
+                            prices in Rupees with free shipping over ₹1,500.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="#" class="logo">RE<span>VENKO</span></a>
+                    <p>Aarav's personal decluttering storefront. Giving my used clothing, household gear, sturdy
+                        shipping
+                        boxes, and crazy collectibles a second life. Eco-friendly and student-budget friendly.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">Products</h4>
+                    <ul>
+                        <li><a href="#shop">Used Clothing</a></li>
+                        <li><a href="#shop">Cardboard Delivery Boxes</a></li>
+                        <li><a href="#shop">Crazy Collectibles</a></li>
+                        <li><a href="#shop">Secondhand Home Gear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">Support</h4>
+                    <ul>
+                        <li><a href="#new-arrivals">View New Arrivals</a></li>
+                        <li><a href="#">Domestic Shipping Info</a></li>
+                        <li><a href="#">Returns policy</a></li>
+                        <li><a href="#shop">Personal Items Only</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-links-title">About Store</h4>
+                    <ul>
+                        <li><a href="#why-choose">Why Buy Used?</a></li>
+                        <li><a href="#shop">Explore Items</a></li>
+                        <li><a href="#shop">Personal Collection</a></li>
+                        <li><a href="#footer">Contact Owner</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 REVENKO. Aarav's Personal Declutter Sale. All rights reserved.</p>
+                <p>Built with Pure HTML, CSS, and Vanilla JS. Indian Rupee (₹) Store.</p>
+            </div>
+        </footer>
+
+        <!-- Shopping Cart Off-canvas Drawer -->
+        <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-drawer-header">
+                <h3 class="cart-drawer-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    Your Cart
+                </h3>
+                <button class="cart-drawer-close" id="cart-close-btn" aria-label="Close Cart">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="cart-items-list" id="cart-items-container">
+                <!-- Rendered dynamically -->
+            </div>
+
+            <div class="cart-drawer-footer">
+                <div class="cart-promo-section">
+                    <input type="text" class="promo-input" id="promo-code-input"
+                        placeholder="Promo code (e.g. WELCOME10)">
+                    <button class="btn btn-secondary" id="apply-promo-btn" style="padding: 10px 20px;">Apply</button>
+                </div>
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">₹0.00</span>
+                    </div>
+                    <div class="summary-row" id="discount-row" style="display: none;">
+                        <span>Discount (Promo)</span>
+                        <span id="cart-discount">-₹0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Shipping</span>
+                        <span id="cart-shipping">₹0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">₹0.00</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="checkout-btn" style="width: 100%;">
+                    Secure Checkout
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Quick View Modal -->
+        <div class="modal-overlay" id="quickview-modal">
+            <div class="modal-content">
+                <button class="modal-close" id="quickview-close-btn" aria-label="Close Modal">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+
+                <div class="quickview-layout">
+                    <div class="quickview-gallery">
+                        <div class="quickview-main-image">
+                            <img id="qv-main-img" src="" alt="Main View">
+                        </div>
+                        <div class="quickview-thumbnails" id="qv-thumbnails-container">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                    <div class="quickview-details">
+                        <span class="product-category" id="qv-category">Item</span>
+                        <h2 class="section-title" id="qv-name">Product Name</h2>
+                        <div class="product-price" id="qv-price" style="font-size: 24px; margin-top: 8px;">₹189.00</div>
+                        <p class="hero-desc" id="qv-desc" style="font-size: 14px; margin-top: 8px;">Product description
+                            goes here.</p>
+
+                        <div class="quickview-specs">
+                            <div class="quickview-spec-item">Condition: <strong id="qv-spec-chassis">Gently
+                                    Used</strong></div>
+                            <div class="quickview-spec-item">Origin: <strong id="qv-spec-layout">Personal
+                                    Collection</strong></div>
+                            <div class="quickview-spec-item">Wear Sign: <strong id="qv-spec-switches">Minor /
+                                    None</strong></div>
+                            <div class="quickview-spec-item">Packaging: <strong id="qv-spec-conn">Standard Box</strong>
+                            </div>
+                        </div>
+
+                        <div
+                            style="display: flex; gap: 16px; align-items: center; margin-top: 16px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+                            <div class="quantity-selector" style="height: 48px; border-radius: 8px;">
+                                <button class="quantity-btn" id="qv-qty-minus"
+                                    style="width: 40px; height: 100%;">-</button>
+                                <span class="quantity-value" id="qv-qty-val"
+                                    style="width: 40px; font-size: 14px;">1</span>
+                                <button class="quantity-btn" id="qv-qty-plus"
+                                    style="width: 40px; height: 100%;">+</button>
+                            </div>
+                            <button class="btn btn-primary" id="qv-add-btn" style="flex: 1; height: 48px;">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Modal -->
+        <div class="modal-overlay" id="checkout-modal">
+            <div class="modal-content" style="max-width: 600px;">
+                <button class="modal-close" id="checkout-close-btn" aria-label="Close Checkout">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+
+                <div class="checkout-layout">
+                    <h3 class="checkout-title">REVENKO Checkout</h3>
+
+                    <div class="checkout-steps">
+                        <div class="checkout-step active" id="step-shipping-indicator">
+                            <span class="checkout-step-num">1</span> Shipping
+                        </div>
+                        <div class="checkout-line"></div>
+                        <div class="checkout-step" id="step-payment-indicator">
+                            <span class="checkout-step-num">2</span> Payment
+                        </div>
+                        <div class="checkout-line"></div>
+                        <div class="checkout-step" id="step-receipt-indicator">
+                            <span class="checkout-step-num">3</span> Complete
+                        </div>
+                    </div>
+
+                    <!-- Step 1 Pane: Shipping Information -->
+                    <div class="checkout-pane active" id="pane-shipping">
+                        <form id="shipping-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="shipping-first-name">First Name</label>
+                                    <input type="text" id="shipping-first-name" class="form-input" required
+                                        placeholder="Aarav">
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping-last-name">Last Name</label>
+                                    <input type="text" id="shipping-last-name" class="form-input" required
+                                        placeholder="Sharma">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="shipping-email">Email Address</label>
+                                    <input type="email" id="shipping-email" class="form-input" required
+                                        placeholder="aarav.sharma@example.in">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="shipping-address">Shipping Address</label>
+                                    <input type="text" id="shipping-address" class="form-input" required
+                                        placeholder="Block C, 45 Vasant Kunj">
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping-city">City</label>
+                                    <input type="text" id="shipping-city" class="form-input" required
+                                        placeholder="New Delhi">
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping-zip">Postal Code (PIN)</label>
+                                    <input type="text" id="shipping-zip" class="form-input" required
+                                        placeholder="110070">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; margin-top: 24px; height: 48px;">
+                                Continue to Payment
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Step 2 Pane: Payment (Credit Card & Interactive Flip) -->
+                    <div class="checkout-pane" id="pane-payment">
+                        <div class="card-visualizer-container">
+                            <div class="credit-card" id="credit-card-view">
+                                <div class="card-front">
+                                    <div class="card-chip"></div>
+                                    <div class="card-number-display" id="card-number-preview">•••• •••• •••• ••••</div>
+                                    <div class="card-bottom">
+                                        <div>
+                                            <div class="card-holder-display">Cardholder Name</div>
+                                            <div class="card-holder-name" id="card-holder-preview">AARAV SHARMA</div>
+                                        </div>
+                                        <div class="card-expiry-display">
+                                            <span class="card-expiry-label">Expires</span>
+                                            <div class="card-expiry-value" id="card-expiry-preview">MM/YY</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-back">
+                                    <div class="card-strip"></div>
+                                    <div class="card-signature-box">
+                                        <div class="card-cvv-display" id="card-cvv-preview">•••</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="payment-form">
+                            <div class="form-grid">
+                                <div class="form-group full-width">
+                                    <label for="card-holder-input">Cardholder Name</label>
+                                    <input type="text" id="card-holder-input" class="form-input" required
+                                        placeholder="AARAV SHARMA" autocomplete="off">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="card-number-input">Card Number</label>
+                                    <input type="text" id="card-number-input" class="form-input" required
+                                        placeholder="4111 2222 3333 4444" autocomplete="off" maxlength="19">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-expiry-input">Expiration Date</label>
+                                    <input type="text" id="card-expiry-input" class="form-input" required
+                                        placeholder="MM/YY" autocomplete="off" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-cvv-input">CVV</label>
+                                    <input type="text" id="card-cvv-input" class="form-input" required placeholder="123"
+                                        autocomplete="off" maxlength="4">
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 16px; margin-top: 24px;">
+                                <button type="button" class="btn btn-secondary" id="payment-back-btn"
+                                    style="flex: 1; height: 48px;">
+                                    Back
+                                </button>
+                                <button type="submit" class="btn btn-primary" style="flex: 1.5; height: 48px;">
+                                    Pay Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3 Pane: Order Complete / Receipt -->
+                    <div class="checkout-pane" id="pane-receipt">
+                        <div class="success-screen">
+                            <div class="success-icon">✓</div>
+                            <h2 class="section-title">Thrift Journey Begins!</h2>
+                            <p class="hero-desc" style="font-size: 14px;">Your order has been verified and payment
+                                processed. A confirmation receipt has been sent to your email.</p>
+
+                            <div class="receipt-card">
+                                <div class="receipt-header">
+                                    <span id="receipt-order-id">Order #REVENKO-85942</span>
+                                    <span id="receipt-date">May 23, 2026</span>
+                                </div>
+                                <div id="receipt-items-list">
+                                    <!-- items rendered dynamically -->
+                                </div>
+                                <div class="receipt-total">
+                                    <span>Grand Total</span>
+                                    <span id="receipt-grand-total">₹0.00</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary" id="receipt-done-btn"
+                                style="width: 100%; max-width: 400px; height: 48px; margin-top: 12px;">
+                                Continue Shopping
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
